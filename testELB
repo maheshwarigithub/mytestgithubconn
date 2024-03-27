@@ -1,0 +1,243 @@
+{
+  "AvailabilityZones": [
+    {
+      "LoadBalancerAddresses": null,
+      "OutpostId": null,
+      "SubnetId": "subnet-06e620ebf2542d4de",
+      "ZoneName": "us-east-2a"
+    },
+    {
+      "LoadBalancerAddresses": null,
+      "OutpostId": null,
+      "SubnetId": "subnet-0e2a32a6c438241bd",
+      "ZoneName": "us-east-2b"
+    }
+  ],
+  "CanonicalHostedZoneId": "ZLMOA37VPKANP",
+  "CreatedTime": "2023-06-20T12:34:11.991Z",
+  "CustomerOwnedIpv4Pool": null,
+  "DNSName": "t6895-b992c63c46f05e5e.elb.us-east-2.amazonaws.com",
+  "EnforceSecurityGroupInboundRulesOnPrivateLinkTraffic": null,
+  "IpAddressType": "ipv4",
+  "LoadBalancerArn": "arn:aws:elasticloadbalancing:us-east-2:588587007245:loadbalancer/net/t6895/b992c63c46f05e5e",
+  "LoadBalancerName": "t6895",
+  "Scheme": "internet-facing",
+  "SecurityGroups": null,
+  "State": {
+    "Code": "active",
+    "Reason": null
+  },
+  "Type": "network",
+  "VpcId": "vpc-0410ea9c9a2440724",
+  "loadBalancerAttributes": [
+    {
+      "Key": "dns_record.client_routing_policy",
+      "Value": "any_availability_zone"
+    },
+    {
+      "Key": "access_logs.s3.prefix",
+      "Value": ""
+    },
+    {
+      "Key": "deletion_protection.enabled",
+      "Value": "false"
+    },
+    {
+      "Key": "load_balancing.cross_zone.enabled",
+      "Value": "false"
+    },
+    {
+      "Key": "access_logs.s3.enabled",
+      "Value": "false"
+    },
+    {
+      "Key": "access_logs.s3.bucket",
+      "Value": ""
+    }
+  ],
+  "loadBalancerListenerAcmCertificates": [],
+  "loadBalancerListenerIamCertificates": null,
+  "loadBalancerListenerRules": {
+    "arn:aws:elasticloadbalancing:us-east-2:588587007245:listener/net/t6895/b992c63c46f05e5e/03a448dd431c0286": [
+      {
+        "Actions": [
+          {
+            "AuthenticateCognitoConfig": null,
+            "AuthenticateOidcConfig": null,
+            "FixedResponseConfig": null,
+            "ForwardConfig": {
+              "TargetGroupStickinessConfig": null,
+              "TargetGroups": [
+                {
+                  "TargetGroupArn": "arn:aws:elasticloadbalancing:us-east-2:588587007245:targetgroup/t6895ssh/945e1745bea783d8",
+                  "Weight": null
+                }
+              ]
+            },
+            "Order": 1,
+            "RedirectConfig": null,
+            "TargetGroupArn": "arn:aws:elasticloadbalancing:us-east-2:588587007245:targetgroup/t6895ssh/945e1745bea783d8",
+            "Type": "forward"
+          }
+        ],
+        "Conditions": null,
+        "IsDefault": true,
+        "Priority": "default",
+        "RuleArn": "arn:aws:elasticloadbalancing:us-east-2:588587007245:listener-rule/net/t6895/b992c63c46f05e5e/03a448dd431c0286/90c47b835a7c7de5"
+      }
+    ],
+    "arn:aws:elasticloadbalancing:us-east-2:588587007245:listener/net/t6895/b992c63c46f05e5e/9508bcc6c3572309": [
+      {
+        "Actions": [
+          {
+            "AuthenticateCognitoConfig": null,
+            "AuthenticateOidcConfig": null,
+            "FixedResponseConfig": null,
+            "ForwardConfig": {
+              "TargetGroupStickinessConfig": null,
+              "TargetGroups": [
+                {
+                  "TargetGroupArn": "arn:aws:elasticloadbalancing:us-east-2:588587007245:targetgroup/t6895/186e1226d4b402b2",
+                  "Weight": null
+                }
+              ]
+            },
+            "Order": 1,
+            "RedirectConfig": null,
+            "TargetGroupArn": "arn:aws:elasticloadbalancing:us-east-2:588587007245:targetgroup/t6895/186e1226d4b402b2",
+            "Type": "forward"
+          }
+        ],
+        "Conditions": null,
+        "IsDefault": true,
+        "Priority": "default",
+        "RuleArn": "arn:aws:elasticloadbalancing:us-east-2:588587007245:listener-rule/net/t6895/b992c63c46f05e5e/9508bcc6c3572309/5c86db3dbe891393"
+      }
+    ],
+    "arn:aws:elasticloadbalancing:us-east-2:588587007245:listener/net/t6895/b992c63c46f05e5e/e0a6c49633fae774": [
+      {
+        "Actions": [
+          {
+            "AuthenticateCognitoConfig": null,
+            "AuthenticateOidcConfig": null,
+            "FixedResponseConfig": null,
+            "ForwardConfig": {
+              "TargetGroupStickinessConfig": null,
+              "TargetGroups": [
+                {
+                  "TargetGroupArn": "arn:aws:elasticloadbalancing:us-east-2:588587007245:targetgroup/stam/764aae831dc0055f",
+                  "Weight": null
+                }
+              ]
+            },
+            "Order": null,
+            "RedirectConfig": null,
+            "TargetGroupArn": "arn:aws:elasticloadbalancing:us-east-2:588587007245:targetgroup/stam/764aae831dc0055f",
+            "Type": "forward"
+          }
+        ],
+        "Conditions": null,
+        "IsDefault": true,
+        "Priority": "default",
+        "RuleArn": "arn:aws:elasticloadbalancing:us-east-2:588587007245:listener-rule/net/t6895/b992c63c46f05e5e/e0a6c49633fae774/909eac3add6242c1"
+      }
+    ]
+  },
+  "loadBalancerListenerSslPolicies": [],
+  "loadBalancerListeners": [
+    {
+      "AlpnPolicy": null,
+      "Certificates": null,
+      "DefaultActions": [
+        {
+          "AuthenticateCognitoConfig": null,
+          "AuthenticateOidcConfig": null,
+          "FixedResponseConfig": null,
+          "ForwardConfig": {
+            "TargetGroupStickinessConfig": null,
+            "TargetGroups": [
+              {
+                "TargetGroupArn": "arn:aws:elasticloadbalancing:us-east-2:588587007245:targetgroup/t6895ssh/945e1745bea783d8",
+                "Weight": null
+              }
+            ]
+          },
+          "Order": 1,
+          "RedirectConfig": null,
+          "TargetGroupArn": "arn:aws:elasticloadbalancing:us-east-2:588587007245:targetgroup/t6895ssh/945e1745bea783d8",
+          "Type": "forward"
+        }
+      ],
+      "ListenerArn": "arn:aws:elasticloadbalancing:us-east-2:588587007245:listener/net/t6895/b992c63c46f05e5e/03a448dd431c0286",
+      "LoadBalancerArn": "arn:aws:elasticloadbalancing:us-east-2:588587007245:loadbalancer/net/t6895/b992c63c46f05e5e",
+      "MutualAuthentication": null,
+      "Port": 22,
+      "Protocol": "TCP",
+      "SslPolicy": null
+    },
+    {
+      "AlpnPolicy": null,
+      "Certificates": null,
+      "DefaultActions": [
+        {
+          "AuthenticateCognitoConfig": null,
+          "AuthenticateOidcConfig": null,
+          "FixedResponseConfig": null,
+          "ForwardConfig": {
+            "TargetGroupStickinessConfig": null,
+            "TargetGroups": [
+              {
+                "TargetGroupArn": "arn:aws:elasticloadbalancing:us-east-2:588587007245:targetgroup/t6895/186e1226d4b402b2",
+                "Weight": null
+              }
+            ]
+          },
+          "Order": 1,
+          "RedirectConfig": null,
+          "TargetGroupArn": "arn:aws:elasticloadbalancing:us-east-2:588587007245:targetgroup/t6895/186e1226d4b402b2",
+          "Type": "forward"
+        }
+      ],
+      "ListenerArn": "arn:aws:elasticloadbalancing:us-east-2:588587007245:listener/net/t6895/b992c63c46f05e5e/9508bcc6c3572309",
+      "LoadBalancerArn": "arn:aws:elasticloadbalancing:us-east-2:588587007245:loadbalancer/net/t6895/b992c63c46f05e5e",
+      "MutualAuthentication": null,
+      "Port": 5439,
+      "Protocol": "TCP",
+      "SslPolicy": null
+    },
+    {
+      "AlpnPolicy": null,
+      "Certificates": null,
+      "DefaultActions": [
+        {
+          "AuthenticateCognitoConfig": null,
+          "AuthenticateOidcConfig": null,
+          "FixedResponseConfig": null,
+          "ForwardConfig": {
+            "TargetGroupStickinessConfig": null,
+            "TargetGroups": [
+              {
+                "TargetGroupArn": "arn:aws:elasticloadbalancing:us-east-2:588587007245:targetgroup/stam/764aae831dc0055f",
+                "Weight": null
+              }
+            ]
+          },
+          "Order": null,
+          "RedirectConfig": null,
+          "TargetGroupArn": "arn:aws:elasticloadbalancing:us-east-2:588587007245:targetgroup/stam/764aae831dc0055f",
+          "Type": "forward"
+        }
+      ],
+      "ListenerArn": "arn:aws:elasticloadbalancing:us-east-2:588587007245:listener/net/t6895/b992c63c46f05e5e/e0a6c49633fae774",
+      "LoadBalancerArn": "arn:aws:elasticloadbalancing:us-east-2:588587007245:loadbalancer/net/t6895/b992c63c46f05e5e",
+      "MutualAuthentication": null,
+      "Port": 8881,
+      "Protocol": "TCP",
+      "SslPolicy": null
+    }
+  ],
+  "loadBalancerTags": {},
+  "WizMetadata": {
+    "region": "us-east-2"
+  }
+}
