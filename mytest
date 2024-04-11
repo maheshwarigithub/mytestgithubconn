@@ -1,0 +1,3 @@
+(mg/connect-via-uri "mongodb: //dev:password@localhost: 27017/dev?
+test
+test
