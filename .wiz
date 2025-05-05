@@ -3,7 +3,7 @@ ignore: # Root level for the .wiz file.
     ALL: # Rules to ignore.
       - mytest # Path to be ignored.
         reason: BY_DESIGN # Pre-defined reason.
-      - test/resources/test-service-account.json # File to be ignored.
+      - awssecrettest.json # File to be ignored.
         reason: BY_DESIGN # Pre-defined reason.
       - test/java/com/af/rta/uninstalls/fcm/fixtures/GoogleAuthWiremock.java # File to be ignored.
         reason: BY_DESIGN # Pre-defined reason.
