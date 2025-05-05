@@ -1,7 +1,7 @@
 ignore: # Root level for the .wiz file.
   secrets: # Against which scan type to ignore.
     ALL: # Rules to ignore.
-      - src/main/resources/mock_ssl/* # Path to be ignored.
+      - mytest # Path to be ignored.
         reason: BY_DESIGN # Pre-defined reason.
       - test/resources/test-service-account.json # File to be ignored.
         reason: BY_DESIGN # Pre-defined reason.
