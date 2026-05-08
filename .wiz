@@ -1,0 +1,9 @@
+ignore:
+  secrets:
+    ALL:
+      /test_secret.rb:
+        reason: FALSE_POSITIVE
+  software_management:
+    ALL:
+      /Gemfile.lock:
+        reason: FALSE_POSITIVE
