@@ -1,0 +1,133 @@
+# =============================================================================
+# DocGen Backend Requirements
+# Document Generation Engine for Clinical Research
+# =============================================================================
+
+# Private Package Repository
+--extra-index-url https://us-east4-python.pkg.dev/prj-sdyctrl-prod-02971c2a-prod/docgen-python-dependency/simple
+
+# =============================================================================
+# CORE DEPENDENCIES
+# =============================================================================
+
+# Custom ML Platform
+mloto[mlflow]==3.0.12
+
+# =============================================================================
+# GOOGLE CLOUD PLATFORM SERVICES
+# =============================================================================
+
+# Core GCP Libraries
+google-api-core==2.25.1
+google-api-python-client==2.179.0
+google-cloud-core==2.4.3
+google-auth==2.40.3
+
+# GCP AI/ML Services
+google-cloud-aiplatform==1.109.0
+google-cloud-documentai==3.5.0
+google-cloud-discoveryengine==0.13.11
+
+# GCP Data & Storage Services
+google-cloud-datastore==2.21.0
+google-cloud-firestore==2.21.0
+google-cloud-storage==2.19.0
+google-cloud-secret-manager==2.24.0
+
+# GCP Operations & Workflow
+google-cloud-logging==3.11.3
+google-cloud-resource-manager==1.14.2
+google-cloud-workflows==1.18.2
+
+# =============================================================================
+# AI/ML & LLM FRAMEWORKS
+# =============================================================================
+
+# LangChain Ecosystem
+langchain==0.3.30
+langchain-core==0.3.86
+langchain-community==0.3.31
+langchain-anthropic==0.3.22
+langchain-google-community==2.0.10
+langchain-google-vertexai==2.1.2
+langchain-openai==0.3.35
+langgraph==1.0.1
+
+# AI/ML Providers
+openai==2.36.0
+anthropic==0.100.0
+huggingface-hub==0.34.4
+tokenizers==0.21.4
+pydantic-ai-slim[openai]==0.7.2
+
+# =============================================================================
+# DOCUMENT PROCESSING
+# =============================================================================
+
+# PDF Processing
+pypdf==6.0.0
+PyMuPDF==1.26.3
+pdf2image==1.17.0
+
+# Office Document Processing
+python-docx==1.2.0
+python-pptx==1.0.2
+openpyxl==3.1.5
+aspose-words==25.4.0
+xlrd==2.0.2
+
+# Text Processing & NLP
+fuzzywuzzy==0.18.0
+Levenshtein==0.27.1
+textstat==0.7.8
+
+# =============================================================================
+# DATA PROCESSING & ANALYSIS
+# =============================================================================
+
+# Data Manipulation
+pandas==2.3.1
+pandasql==0.7.3
+networkx==3.3
+
+# Database Connectivity
+JayDeBeApi==1.2.3
+
+# Geospatial & Graphics
+shapely==2.1.1
+pillow==11.3.0
+
+# =============================================================================
+# WEB FRAMEWORK & HTTP
+# =============================================================================
+
+# Google Cloud Functions
+functions-framework==3.*
+
+# Web Framework
+Flask==3.1.1
+Flask-SSLify==0.1.5
+
+# HTTP Clients
+httpx==0.28.1
+
+# =============================================================================
+# UTILITIES & MISCELLANEOUS
+# =============================================================================
+
+# Template Engine
+Jinja2==3.1.6
+
+# Web Scraping & Parsing
+beautifulsoup4==4.13.4
+
+# Output Formatting
+tabulate==0.9.0
+markdown2==2.5.4
+
+# Development & Debugging
+ipython==8.37.0
+tqdm==4.67.1
+
+# Async Support
+nest-asyncio==1.6.0
