@@ -1,0 +1,2 @@
+  rootProject.name = 'wiz-pr-scope-test'
+  include 'app'
