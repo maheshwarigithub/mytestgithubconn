@@ -1,3 +1,33 @@
  plugins {
       id 'java-library'
   }
+ ext {
+      fakeLib1Version  = '15.6.0'
+      fakeLib2Version  = '4.5.0'
+      fakeLib3Version  = '1.63.0'
+      fakeLib4Version  = '2.10.1'
+      fakeLib5Version  = '1.18.24'
+  }
+
+  dependencies {
+      // --- decoy direct deps (modify versions above, NOT these lines) ---
+      implementation "com.google.guava:guava:${fakeLib1Version}"
+      implementation "org.apache.commons:commons-collections4:${fakeLib2Version}"
+      implementation "com.datadoghq:dd-trace-api:${fakeLib3Version}"
+      implementation "com.fasterxml.jackson.core:jackson-databind:${fakeLib4Version}"
+      implementation "org.projectlombok:lombok:${fakeLib5Version}"
+
+      // --- padding (clean libs, no findings expected) ---
+      implementation 'org.apache.httpcomponents:httpclient:4.5.14'
+      implementation 'commons-io:commons-io:2.15.1'
+      implementation 'org.slf4j:slf4j-api:2.0.9'
+      implementation 'ch.qos.logback:logback-classic:1.4.14'
+      implementation 'com.google.code.gson:gson:2.10.1'
+
+      // === THE TEST DEP ===
+      // springdoc-openapi-ui:1.6.5 transitively pulls spring-web:5.3.14 ->
+      // CVE-2016-1000027 (Critical). This is the line we want to verify
+      // does NOT block PRs that only touch other lines.
+      implementation 'org.springdoc:springdoc-openapi-ui:1.6.5'
+  }
+
