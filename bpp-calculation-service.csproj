@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<RootNamespace>BppCalculationService</RootNamespace>
+		<UserSecretsId>5b523a38-a8ff-4c08-8fcb-c6e16aef4b2a</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<AssemblyName>bppcalculationservice</AssemblyName>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+		<StartupObject>bpp_calculation_service.Program</StartupObject>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<AssemblyVersion>1.0.0</AssemblyVersion>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<NoWarn>1701;1702;1591</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="BRZ365.OCI.UmeIntegration.Infrastructure" Version="1.1.2" />
+		<PackageReference Include="BRZ365.OCM.Messaging.Outbound.Azure" Version="1.1.0" />
+		<PackageReference Include="BRZ365.OCI.UmeIntegration.Contracts" Version="1.1.0" />
+		<PackageReference Include="BRZ365.OCI.UmeIntegration.Application" Version="1.1.0" />
+		<PackageReference Include="BRZ365.OCI.UmeIntegration.Messaging" Version="1.4.1" />
+		<PackageReference Include="Dapr.AspNetCore" Version="1.13.1" />
+		<PackageReference Include="Microsoft.ApplicationInsights.Profiler.AspNetCore" Version="2.7.3" />
+		<PackageReference Include="Microsoft.Identity.Web" Version="3.8.3" />
+		<PackageReference Include="NSwag.AspNetCore" Version="14.1.0" />
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.2" />
+		<PackageReference Include="BRZ365.OCI.Common.Utilities" Version="1.0.33" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Application\Application.csproj" />
+		<ProjectReference Include="..\Brz365.Configuration.Extensions\Brz365.Configuration.Extensions.csproj" />
+		<ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+		<ProjectReference Include="..\Messaging.InterApp.KI.Azure\Messaging.InterApp.KI.Azure.csproj" />
+		<ProjectReference Include="..\BppCalculationService.FileUpload\BppCalculationService.FileUpload.csproj" />
+	</ItemGroup>
+
+</Project>
