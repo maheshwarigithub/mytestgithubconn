@@ -2,7 +2,7 @@
       id 'java-library'
   }
  ext {
-      fakeLib1Version  = '15.6.0'
+      fakeLib1Version  = '15.5.0'
       fakeLib2Version  = '4.5.0'
       fakeLib3Version  = '1.63.0'
       fakeLib4Version  = '2.10.1'
