@@ -21,7 +21,7 @@
       implementation 'org.apache.httpcomponents:httpclient:4.5.14'
       implementation 'commons-io:commons-io:2.15.1'
       implementation 'org.slf4j:slf4j-api:2.0.9'
-      implementation 'ch.qos.logback:logback-classic:1.4.14'
+      implementation 'ch.qos.logback:logback-classic:1.5.25'
       implementation 'com.google.code.gson:gson:2.10.1'
 
       // === THE TEST DEP ===
